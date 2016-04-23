@@ -18,7 +18,16 @@ library
   hs-source-dirs:      src
   exposed-modules:     Application
   build-depends:       base
+                     , authenticate-oauth
+                     , bytestring
                      , classy-prelude
+                     , conduit
+                     , conduit-extra
+                     , directory
+                     , http-conduit
+                     , resourcet
+                     , twitter-conduit
+                     , twitter-types
   default-language:    Haskell2010
   default-extensions:  FlexibleContexts
                        NamedFieldPuns
