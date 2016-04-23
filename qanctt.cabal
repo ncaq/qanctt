@@ -1,0 +1,39 @@
+name:                qanctt
+version:             0.1.0
+homepage:            https://github.com/ncaq/qanctt
+license:             MIT
+license-file:        LICENSE
+author:              ncaq
+maintainer:          ncaq@ncaq.net
+copyright:           Copyright ncaq
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.10
+
+source-repository head
+  type:     git
+  location: https://github.com/ncaq/qanctt
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Lib
+  build-depends:       base
+                     , classy-prelude
+  default-language:    Haskell2010
+
+executable qanctt-exe
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , qanctt
+  default-language:    Haskell2010
+
+test-suite qanctt-test
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      test
+  main-is:             Spec.hs
+  build-depends:       base
+                     , qanctt
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  default-language:    Haskell2010
