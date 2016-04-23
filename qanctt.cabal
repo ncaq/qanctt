@@ -20,6 +20,12 @@ library
   build-depends:       base
                      , classy-prelude
   default-language:    Haskell2010
+  default-extensions:  FlexibleContexts
+                       NamedFieldPuns
+                       NoImplicitPrelude
+                       OverloadedStrings
+                       RecordWildCards
+                       ScopedTypeVariables
 
 executable qanctt-exe
   hs-source-dirs:      app
